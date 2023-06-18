@@ -1,4 +1,5 @@
 const path = require('path');
+const nodePolyfill = require('node-polyfill-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -37,11 +38,11 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    new nodePolyfill() // Add the node polyfill plugin
+  ],
   devServer: {
     contentBase: path.resolve(__dirname, 'dist'),
     publicPath: '/assets/'
-  },
-  node: {
-    crypto: 'empty'
   }
 };
