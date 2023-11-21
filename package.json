@@ -1,12 +1,13 @@
 {
-  "name": "chapter_19",
+  "name": "weatherapp",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node_modules/.bin/webpack --mode production"
+    "build": "node_modules/.bin/webpack --mode production",
+    "serve": "webpack-dev-server --mode development"
   },
-  "author": "",
+  "author": "JenniferUdensi",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.2.3",
